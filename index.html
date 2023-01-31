@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="image">
+        <div class="image__container">
+          <div class="gray-card">
+            <img src="Assets/images/bg-card-back.png" alt="" />
+            <span class="cvc">000</span>
+          </div>
+          <div class="colored-card">
+            <img src="Assets/images/bg-card-front.png" alt="" />
+            <div class="card-top">
+              <img src="Assets/images/card-logo.svg" alt="" />
+            </div>
+            <div class="card-number">
+              <span class="n-1">0000</span>
+              <span class="n-2">0000</span>
+              <span class="n-3">0000</span>
+              <span class="n-4">0000</span>
+            </div>
+            <div class="card-footer">
+              <span class="name">Jane Appleseed</span>
+              <span class="validity">00/00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <form class="form" novalidate>
+          <label for="name">Cardholder Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <p class="helper-text input-name"></p>
+
+          <label for="card-number">Card Number</label>
+          <input
+            type="text"
+            id="card-number"
+            name="cardNumber"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          <p class="helper-text input-cardNumber"></p>
+
+          <div class="form-group">
+            <div class="group">
+              <label for="month">Exp. Date</label>
+              <input type="text" id="month" name="month" placeholder="MM" />
+            </div>
+            <div class="group">
+              <label for="year">(MM/YY)</label>
+              <input type="text" id="year" name="year" placeholder="YY" />
+            </div>
+            <div class="group">
+              <label for="cvc">CVC</label>
+              <input type="text" id="cvc" name="cvc" placeholder="e.g. 123" />
+            </div>
+          </div>
+          <p class="helper-text input-month"></p>
+          <p class="helper-text input-year"></p>
+          <p class="helper-text input-cvc"></p>
+
+          <button type="submit">Confirm</button>
+        </form>
+
+        <div class="completed">
+          <img src="Assets/images/icon-complete.svg" alt="" />
+          <div>
+            <h2>Thank you!</h2>
+            <p>We've added your card details</p>
+          </div>
+          <button type="button" onclick="location.reload()">Continue</button>
+        </div>
+      </div>
+    </main>
+    <script src="Assets/js/main.js"></script>
+  </body>
+</html>
